@@ -1,0 +1,274 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+.header {
+  padding: 15px;
+}
+
+.header img {
+  display: inline-block;
+}
+
+.header h1 {
+  display: inline-block;|
+}
+
+.main {
+  background-color: #f2f2f2 ;
+  padding: 40px 0;
+}
+
+.main h1 {
+  color: #F65A5B ;
+  font-size: 42px;
+  margin: 0 0 80px 0;
+  padding: 20px 0;
+  line-height: 60px;
+  width: 100%;
+}
+
+.main h2 {
+  background-color: #DDDDDD ;
+  color: #999999 ;
+  font-size: 20px;
+  margin: 0 0 40px 0;
+  padding: 20px 0;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+.footer {
+  text-align: center;
+  margin: 80px 0 110px;
+}
+
+.footer h2 {
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+.footer img {
+  margin: 0 10px;
+}
+
+.container-fluid {
+  alignment: center;
+  width: auto;
+}
+
+.md-button.md-fab.md-mini {
+  min-height: 10px;
+  min-width: 10px;
+  line-height: 1%;
+  width: 2rem;
+  height: 2rem;
+  z-index: auto;
+}
+
+.cartContainer {
+  margin: auto;
+  min-width: 350px;
+  max-width: 1200px;
+  background-color: #f2f2f2;
+}
+
+.cart {
+  margin: auto;
+  min-width: 150px;
+  margin-bottom: 5px;
+  padding: 10px 10px 10px 1%;
+  border: 1px solid #F65A5B;
+}
+
+.cartImg {
+  width: 100px;
+  height: 150px;
+  flex: none;
+}
+
+img#bookImg {
+  height: 100%;
+  width: 100%;
+}
+
+.imgContainer {
+  width: 200px;
+  height: 300px;
+}
+
+.cartInfo {
+  padding: 0 12px 12px 12px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.cartTitle {
+  font-size: 18px;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cartAuthor {
+  font-size: 12px;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cartDescription {
+  margin-top: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cartAmount {
+  text-align: center;
+  justify-content: space-around;
+}
+
+.cartItemTotal {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.emptyCart {
+  padding: 1%;
+}
+
+md-content {
+  padding: 10px;
+}
+
+.btnHolder {
+  padding-left: 15px;
+  padding-top: 100px;
+}
+
+.singlePrice {
+  font-size: 18px;
+  align-self: center;
+}
+
+.singleBuy {
+  padding-right: 5px;
+  align-self: center;
+}
+
+.miniCartContainer1,
+.miniCartContainer2{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.buyContainer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#btm {
+  padding-bottom: 10px;
+}
+
+.miniCart {
+  padding: 1px;
+  background-color: white;
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  border: 5px solid #F65A5B;
+}
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.bookInfo {
+  width: 200px;
+  float: left;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#bookDes {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+#bookTitle {
+  white-space:nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#bookAuthor {
+  font-size: 12px;
+  font-weight: 500;
+  padding-top: 5px;
+  white-space:nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#bookPrice {
+  font-size: 18px;
+}
+
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+.jumbotron {
+    margin-bottom: 0;
+}
+
+footer {
+    background-color: #f2f2f2;
+    padding: 25px;
+}
+
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: relative; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    left: 50%; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #f65a5b; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}

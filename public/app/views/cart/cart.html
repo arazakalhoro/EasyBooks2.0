@@ -1,0 +1,22 @@
+<md-content class="cartContainer">
+  <h1> Your Cart  </h1>
+  <div class="emptyCart" ng-if="shopCart.getCart().length < 1">The cart is empty.</div>
+
+  <div class="cart" layout="row" ng-repeat="item in shopCart.getCart() track by $index">
+    <div class="cartImg" ng-click="goTo(item)"><img id="bookImg" ng-src="{{ item.img }}"></div>
+    <div class="cartInfo" layout="column">
+      <div class="cartTitle" ng-click="goTo(item)">{{ item.title }}</div>
+      <div class="cartAuthor">{{ item.author }}</div>
+      <div class="cartDescription">{{ item.description }}</div>
+    </div>
+    <div class="cartAmount" layout="column">
+      <div>
+        <md-button class="md-fab md-mini md-primary" ng-disabled="item.amount <= 1" ng-click="shopCart.decrease(item)">-</md-button>
+        {{item.amount}}
+        <md-button class="md-fab md-mini md-primary" ng-click="shopCart.addToCart(item)">+</md-button>
+      </div>
+      <div class="cartItemTotal">{{ item.price * item.amount | currency }}</div>
+      <md-button class="md-raised" ng-click="shopCart.removeFromCart(item)">Remove</md-button>
+    </div>
+  </div>
+</md-content>

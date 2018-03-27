@@ -9,11 +9,13 @@
 
 .adminID {
     min-width: 30px;
+    max-width: 30px;
     border: 1px solid grey;
 }
 
 .adminTitle {
     min-width: 90px;
+    max-width: 90px;
     border: 1px solid grey;
     overflow: hidden;
 }
@@ -28,18 +30,21 @@
 
 .adminDescription {
     min-width: 200px;
+    max-width: 200px;
     border: 1px solid grey;
     overflow: hidden;
 }
 
 .adminAuthor {
     min-width: 90px;
+    max-width: 90px;
     border: 1px solid grey;
     overflow: hidden;
 }
 
 .adminPrice {
     min-width: 70px;
+    max-width: 70px;
     border: 1px solid grey;
     overflow: hidden;
 }

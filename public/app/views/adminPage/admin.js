@@ -27,13 +27,20 @@ angular.module('myApp.admin', ['ngRoute'])
             clickOutsideToClose: true,
             fullscreen: $scope.customFullscreen,
             locals: {id: id}
-        })
-        .then(function (answer) {
-
-        }, function () {
-
         });
+    };
 
+    $scope.showConfirm = function(id, ev){
+        var confirm = $mdDialog.confirm()
+           .title('Are you sure you want to delete this book?')
+           .textContent('This will remove the book and all information about it from the database.')
+           .targetEvent(ev)
+           .ok('Yes, delete it.')
+           .cancel('No, cancel');
+
+       $mdDialog.show(confirm).then(function () {
+           library.delete(id);
+       });
     };
 
     function DialogController($scope, $mdDialog, id) {
@@ -63,8 +70,6 @@ angular.module('myApp.admin', ['ngRoute'])
 
         $scope.answer = function() {
             $scope.book.price = $scope.price;
-
-            console.log($scope.book);
 
             if ($scope.book.id === 0) {
                 library.create($scope.book);

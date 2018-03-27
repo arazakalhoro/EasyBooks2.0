@@ -29,6 +29,15 @@ angular.module('myApp')
                 }).then(function () {
                     location.reload();
                 })
+            },
+            delete: function (id) {
+                console.log(id);
+                $http({
+                    method: 'DELETE',
+                    url: 'api/books/' + id
+                }).then(function () {
+                    location.reload();
+                })
             }
         };
     });

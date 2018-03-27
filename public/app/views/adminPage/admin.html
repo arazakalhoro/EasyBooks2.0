@@ -23,6 +23,6 @@
         <div class="adminAuthor">{{ book.author }}</div>
         <div class="adminPrice">{{ book.price }}</div>
         <div class="adminButton"><md-button class="md-raised md-primary" ng-click="showForm(book.id, $event)">EDIT</md-button></div>
-        <div class="adminButton"><md-button class="md-raised md-warn">DELETE</md-button></div>
+        <div class="adminButton"><md-button class="md-raised md-warn" ng-click="showConfirm(book.id, $event)">DELETE</md-button></div>
     </div>
 </div>

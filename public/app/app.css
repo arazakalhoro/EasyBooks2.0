@@ -242,6 +242,16 @@ md-content {
   align-self: center;
 }
 
+#adminText {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.formContent {
+  min-width: 500px;
+}
+
 .navbar {
     margin-bottom: 0;
     border-radius: 0;

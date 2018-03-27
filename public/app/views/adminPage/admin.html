@@ -1,28 +1,31 @@
-<head>
-    <link rel="stylesheet" href="app/views/adminPage/admin.css">
-</head>
+<md-toolbar>
+    <div class="md-toolbar-tools">
+        <span>Edit, Add or Delete books</span>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="showForm('0', $event)" aria-label="Add Book">
+            <i class="material-icons">add</i>
+            <md-tooltip md-direction="bottom">
+                Add book
+            </md-tooltip>
+        </md-button>
+    </div>
+</md-toolbar>
 
-<div class="adminTable" layout="column">
-    <div class="adminHeader" layout="row">
-        <div class="adminID">ID</div>
-        <div class="adminTitle">Title</div>
-        <div class="adminImg">Image</div>
-        <div class="adminDescription">Description</div>
-        <div class="adminAuthor">Author</div>
-        <div class="adminPrice">Price</div>
-        <div class="adminButton"></div>
-        <div class="adminAddButton"><md-button class="md-fab md-primary" aria-label="Add book" ng-click="showForm('0', $event)">
-            <i id="addButton" class="material-icons">add</i>
-        </md-button></div>
-    </div>
-    <div class="adminBody" ng-repeat="book in allBooks track by $index" layout="row">
-        <div class="adminID">{{ book.id }}</div>
-        <div class="adminTitle">{{ book.title }}</div>
-        <div class="adminImg"><img id="bookImg" ng-src="{{ book.img }}"></div>
-        <div class="adminDescription">{{ book.description }}</div>
-        <div class="adminAuthor">{{ book.author }}</div>
-        <div class="adminPrice">{{ book.price }}</div>
-        <div class="adminButton"><md-button class="md-raised md-primary" ng-click="showForm(book.id, $event)">EDIT</md-button></div>
-        <div class="adminButton"><md-button class="md-raised md-warn" ng-click="showConfirm(book.id, $event)">DELETE</md-button></div>
-    </div>
-</div>
+<md-content>
+    <md-list>
+        <md-list-item class="md-3-line" ng-repeat="book in allBooks track by $index">
+            <img ng-src="{{book.img}}" class="md-avatar">
+            <div class="md-list-item-text">
+                <h3>{{book.title}}</h3>
+                <h4>{{book.author}}</h4>
+                <p id="adminText">{{book.description}}</p>
+            </div>
+            <span class="md-secondary">
+                {{ book.price | currency }}
+            </span>
+            <md-button class="md-secondary md-raised md-primary" ng-click="showForm(book.id, $event)">Edit</md-button>
+            <md-button class="md-secondary md-raised md-warn" ng-click="showConfirm(book.id, $event)">Delete</md-button>
+            <md-divider md-inset ng-if="!$last"></md-divider>
+        </md-list-item>
+    </md-list>
+</md-content>

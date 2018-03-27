@@ -1,0 +1,66 @@
+
+.adminTable {
+    display: flex;
+}
+
+.adminBody {
+    max-height: 100px;
+}
+
+.adminID {
+    min-width: 30px;
+    border: 1px solid grey;
+}
+
+.adminTitle {
+    min-width: 90px;
+    border: 1px solid grey;
+    overflow: hidden;
+}
+
+.adminImg {
+    min-width: 70px;
+    max-width: 70px;
+    max-height: 100px;
+    padding: 5px;
+    border: 1px solid grey;
+}
+
+.adminDescription {
+    min-width: 200px;
+    border: 1px solid grey;
+    overflow: hidden;
+}
+
+.adminAuthor {
+    min-width: 90px;
+    border: 1px solid grey;
+    overflow: hidden;
+}
+
+.adminPrice {
+    min-width: 70px;
+    border: 1px solid grey;
+    overflow: hidden;
+}
+
+.adminAddButton {
+    min-width: 110px;
+    border: 1px solid grey;
+    padding-left: 20px;
+}
+
+#addButton {
+    line-height: unset;
+}
+
+.adminButton {
+    min-width: 110px;
+    border: 1px solid grey;
+    padding-top: 25px;
+}
+
+
+.formContent {
+    min-width: 500px;
+}

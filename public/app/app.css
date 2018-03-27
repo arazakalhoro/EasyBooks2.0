@@ -153,14 +153,17 @@ md-content {
   padding-top: 100px;
 }
 
-.singlePrice {
-  font-size: 18px;
-  align-self: center;
-}
-
 .singleBuy {
   padding-right: 5px;
   align-self: center;
+}
+
+#singleInfo {
+  padding-right: 5px;
+}
+
+#singleImg {
+  margin-top: unset;
 }
 
 .miniCartContainer1,
@@ -234,8 +237,9 @@ md-content {
   text-overflow: ellipsis;
 }
 
-#bookPrice {
+.bookPrice {
   font-size: 18px;
+  align-self: center;
 }
 
 .navbar {

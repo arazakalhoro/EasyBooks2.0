@@ -18,5 +18,11 @@ Route::get('/', function () {
 // A route group allows us to have a prefix, in this case api
 Route::group(array('prefix' => 'api'), function()
 {
-    Route::resource('books', 'BooksController');
+    Route::get('books', 'BooksController@index');
+    Route::get('books/{id}', 'BooksController@show');
+    Route::post('books', 'BooksController@create');
+    Route::post('books/{id}', 'BooksController@update');
+    Route::delete('books/{id}', 'BooksController@destroy');
+
+    Route::resource('users', 'UsersController');
 });

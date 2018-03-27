@@ -1,0 +1,62 @@
+<md-content class="formContent">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h2>Edit book</h2>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="cancel()">
+                <i class="material-icons">close</i>
+            </md-button>
+        </div>
+    </md-toolbar>
+    <form name="bookForm"  layout="column">
+        <md-input-container>
+            <label>Title</label>
+            <input required name="title" ng-model="book.title"/>
+            <div ng-messages="bookForm.title.$error">
+                <div ng-message="required">Title is required!</div>
+            </div>
+        </md-input-container>
+
+        <md-input-container>
+            <label>Image link</label>
+            <input required name="img" type="url" ng-model="book.img"/>
+            <div ng-messages="bookForm.img.$error">
+                <div ng-message="required">Image link is required!</div>
+                <div ng-message="url">Invalid URL!</div>
+            </div>
+        </md-input-container>
+
+        <md-input-container>
+            <label>Description</label>
+            <textarea required name="description" rows="5" ng-model="book.description"></textarea>
+            <div ng-messages="bookForm.description.$error">
+                <div ng-message="required">Please enter a description</div>
+            </div>
+        </md-input-container>
+
+        <md-input-container>
+            <label>Author</label>
+            <input required name="author" ng-model="book.author"/>
+            <div ng-messages="bookForm.author.$error">
+                <div ng-message="required">Author is required!</div>
+            </div>
+        </md-input-container>
+
+        <md-input-container>
+            <label>Price</label>
+            <input required name="price" type="number" step="0.01" ng-model="price"/>
+            <div ng-messages="bookForm.price.$error">
+                <div ng-message="number">That is not a number!</div>
+                <div ng-message="required">A price is required!</div>
+                <div ng-message="step">To many decimals!</div>
+            </div>
+        </md-input-container>
+        <div>
+            <md-button ng-click="answer()"
+                       ng-disabled="bookForm.title.$invalid || bookForm.img.$invalid || bookForm.description.$invalid
+                                    || bookForm.author.$invalid || bookForm.price.$invalid">
+                Submit
+            </md-button>
+        </div>
+    </form>
+</md-content>

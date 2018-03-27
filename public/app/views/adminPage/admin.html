@@ -1,0 +1,28 @@
+<head>
+    <link rel="stylesheet" href="app/views/adminPage/admin.css">
+</head>
+
+<div class="adminTable" layout="column">
+    <div class="adminHeader" layout="row">
+        <div class="adminID">ID</div>
+        <div class="adminTitle">Title</div>
+        <div class="adminImg">Image</div>
+        <div class="adminDescription">Description</div>
+        <div class="adminAuthor">Author</div>
+        <div class="adminPrice">Price</div>
+        <div class="adminButton"></div>
+        <div class="adminAddButton"><md-button class="md-fab md-primary" aria-label="Add book" ng-click="showForm('0', $event)">
+            <i id="addButton" class="material-icons">add</i>
+        </md-button></div>
+    </div>
+    <div class="adminBody" ng-repeat="book in allBooks track by $index" layout="row">
+        <div class="adminID">{{ book.id }}</div>
+        <div class="adminTitle">{{ book.title }}</div>
+        <div class="adminImg"><img id="bookImg" ng-src="{{ book.img }}"></div>
+        <div class="adminDescription">{{ book.description }}</div>
+        <div class="adminAuthor">{{ book.author }}</div>
+        <div class="adminPrice">{{ book.price }}</div>
+        <div class="adminButton"><md-button class="md-raised md-primary" ng-click="showForm(book.id, $event)">EDIT</md-button></div>
+        <div class="adminButton"><md-button class="md-raised md-warn">DELETE</md-button></div>
+    </div>
+</div>

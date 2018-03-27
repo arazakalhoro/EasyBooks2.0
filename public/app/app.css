@@ -194,6 +194,19 @@ md-content {
   border: 5px solid #F65A5B;
 }
 
+.material-icons.md-light {
+  color: rgba(255, 255, 255, 1);
+}
+
+.cartMini {
+  background-color: #222;
+  position: fixed;
+  display: flex;
+  bottom: 0;
+  right: 10px;
+  border-radius: 20px 20px 0 0;
+}
+
 .flex-container {
   padding: 0;
   margin: 0;

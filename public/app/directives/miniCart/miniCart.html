@@ -1,9 +1,27 @@
 
 <div class="cartMini" layout="row">
-    <md-button class="md-icon-button">
+    <md-button class="md-icon-button" ng-click="checkout()">
         <i class="material-icons md-light">shopping_cart</i>
     </md-button>
+    <div class="miniAmount" ng-show="shopCart.getAmount() > 0">
+        ({{ shopCart.getAmount() }})
+    </div>
 </div>
+<md-content class="cartFull" ng-show="isOpen" layout="column">
+    <div layout="row">
+        <h4>Cart</h4>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="change()">
+            <i class="material-icons md-light md-18">close</i>
+        </md-button>
+    </div>
+    <md-content>
+        <div layout="row" ng-repeat="item in shopCart.getCart()">
+            <div> {{ item.title }} </div>
+            <div>  </div>
+        </div>
+    </md-content>
+</md-content>
 
 <!--
 <div class="miniCart">

@@ -4,7 +4,9 @@ angular.module('myApp')
             scope: {},
             restrict: 'E',
             templateUrl: 'app/directives/miniCart/miniCart.html',
-            controller: ['$scope', function ($scope) {
+            controller: ['$scope', '$mdPanel', function ($scope, $mdPanel) {
+
+                $scope.isOpen = false;
 
                 $scope.shopCart = shoppingCart;
 
@@ -15,6 +17,10 @@ angular.module('myApp')
                 $scope.checkout = function () {
                     $location.url('cart');
                 };
+
+                $scope.change = function () {
+                    $scope.isOpen = !$scope.isOpen;
+                }
             }]
         }
     });

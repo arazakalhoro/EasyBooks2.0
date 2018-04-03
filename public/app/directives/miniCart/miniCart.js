@@ -14,7 +14,7 @@ angular.module('myApp')
                     return ($location.$$path === '/cart');
                 };
 
-                $scope.checkout = function () {
+                $scope.checkOut = function () {
                     $location.url('cart');
                 };
 

@@ -1,26 +1,32 @@
 
 <div class="cartMini" layout="row">
-    <md-button class="md-icon-button" ng-click="checkout()">
+    <md-button class="md-icon-button" ng-click="change()">
         <i class="material-icons md-light">shopping_cart</i>
     </md-button>
     <div class="miniAmount" ng-show="shopCart.getAmount() > 0">
         ({{ shopCart.getAmount() }})
     </div>
 </div>
-<md-content class="cartFull" ng-show="isOpen" layout="column">
+<md-content class="cartFull" ng-show="isOpen || getBuy()" layout="column">
     <div layout="row">
-        <h4>Cart</h4>
+        <h4>Your Cart</h4>
         <span flex></span>
         <md-button class="md-icon-button" ng-click="change()">
             <i class="material-icons md-light md-18">close</i>
         </md-button>
     </div>
-    <md-content>
-        <div layout="row" ng-repeat="item in shopCart.getCart()">
-            <div> {{ item.title }} </div>
-            <div>  </div>
-        </div>
-    </md-content>
+    <div layout="row">
+        <span>Subtotal ({{ shopCart.getAmount() }} items) :</span>
+        <span flex></span>
+        <span>{{ shopCart.getSum() | currency}}</span>
+    </div>
+    <div layout="row">
+        <md-button class="md-raised" ng-disabled="shopCart.isEmpty()" ng-click="shopCart.empty()">Empty cart</md-button>
+        <md-button class="md-raised" ng-disabled="getBuy() || shopCart.getCart().length < 1" ng-click="checkOut()">
+            <span ng-show="getBuy()">Buy</span>
+            <span ng-show="!getBuy()">Checkout</span>
+        </md-button>
+    </div>
 </md-content>
 
 <!--

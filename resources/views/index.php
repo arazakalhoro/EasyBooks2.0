@@ -55,7 +55,7 @@
             </div>
         </div>
     </nav>
-
+<!--
     <div id="coverflow">
         <div class="covers">
             <ul>
@@ -207,7 +207,7 @@
         </div>
         <div class="Controller"></div>
     </div>
-    
+    !-->
 
     <div class="main">
         <div class="container">

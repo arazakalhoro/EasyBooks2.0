@@ -1,26 +1,26 @@
 
 <div class="cartMini" layout="row">
     <md-button class="md-icon-button" ng-click="change()">
-        <i class="material-icons md-light">shopping_cart</i>
+        <i class="material-icons">shopping_cart</i>
     </md-button>
     <div class="miniAmount" ng-show="shopCart.getAmount() > 0">
         ({{ shopCart.getAmount() }})
     </div>
 </div>
-<md-content class="cartFull" ng-show="isOpen || getBuy()" layout="column">
+<md-content class="cartMini cartMiniFull" ng-show="isOpen || getBuy()" layout="column">
     <div layout="row">
         <h4>Your Cart</h4>
         <span flex></span>
-        <md-button class="md-icon-button" ng-click="change()">
-            <i class="material-icons md-light md-18">close</i>
+        <md-button class="md-icon-button" ng-hide="getBuy()" ng-click="change()">
+            <i class="material-icons md-18">close</i>
         </md-button>
     </div>
-    <div layout="row">
+    <div class="miniTotal" layout="row">
         <span>Subtotal ({{ shopCart.getAmount() }} items) :</span>
         <span flex></span>
         <span>{{ shopCart.getSum() | currency}}</span>
     </div>
-    <div layout="row">
+    <div class="miniCartButtons" layout="row">
         <md-button class="md-raised" ng-disabled="shopCart.isEmpty()" ng-click="shopCart.empty()">Empty cart</md-button>
         <md-button class="md-raised" ng-disabled="getBuy() || shopCart.getCart().length < 1" ng-click="checkOut()">
             <span ng-show="getBuy()">Buy</span>
@@ -28,17 +28,3 @@
         </md-button>
     </div>
 </md-content>
-
-<!--
-<div class="miniCart">
-    <div class="miniCartContainer1">
-        <div>Total Sum ({{ shopCart.getAmount() }}): {{ shopCart.getSum() | currency }}</div>
-    </div>
-    <div class="miniCartContainer2">
-        <md-button class="md-raised" ng-disabled="shopCart.getCart().length < 1" ng-click="shopCart.emptyCart()">Empty cart</md-button>
-        <md-button class="md-raised" ng-disabled="getBuy() || shopCart.getCart().length < 1" ng-click="checkout()">
-            <span ng-show="getBuy()">Buy</span>
-            <span ng-show="!getBuy()">Go To Cart</span>
-        </md-button>
-    </div>
-</div>--!>

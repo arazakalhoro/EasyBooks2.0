@@ -1,11 +1,11 @@
 
 <div class="flex-container">
     <div class="bookInfo" ng-repeat="book in allBooks">
-        <h3 ng-click="goTo(book)" id="bookTitle" ng-bind="book.title" ></h3>
+        <h3 class="noWrapOverflow" ng-click="goTo(book)" ng-bind="book.title" ></h3>
         <div class="imgContainer">
             <img id="bookImg" ng-click="goTo(book)" ng-src="{{ book.img }}" />
         </div>
-        <p id="bookAuthor">By {{ book.author }}</p>
+        <p class="bookAuthor noWrapOverflow">By {{ book.author }}</p>
         <p id="bookDes">{{ book.description }}</p>
         <div class="buyContainer">
             <div class="bookPrice">{{ book.price | currency }}</div>

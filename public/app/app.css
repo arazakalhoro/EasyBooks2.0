@@ -166,14 +166,6 @@ md-content {
   margin-top: unset;
 }
 
-.miniCartContainer1,
-.miniCartContainer2{
-  display: flex;
-  justify-content: space-around;
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-
 .buyContainer {
   display: flex;
   justify-content: space-between;
@@ -251,30 +243,21 @@ md-content {
   -webkit-box-orient: vertical;
 }
 
-#bookTitle {
+.noWrapOverflow {
   white-space:nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-#bookAuthor {
+.bookAuthor {
   font-size: 12px;
   font-weight: 500;
   padding-top: 5px;
-  white-space:nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .bookPrice {
   font-size: 18px;
   align-self: center;
-}
-
-#adminText {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .formContent {

@@ -2,12 +2,6 @@
 
 angular.module('myApp.admin', ['ngRoute'])
 
-.config(['$routeProvider', function($routeProvider) {
-    $routeProvider.when('/admin', {
-        templateUrl: 'app/views/adminPage/admin.html',
-        controller: 'AdminCtrl'
-    });
-}])
 
 .controller('AdminCtrl', ['library', '$scope', '$mdDialog', function(library, $scope, $mdDialog) {
 

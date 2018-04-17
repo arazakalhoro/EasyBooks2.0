@@ -2,13 +2,6 @@
 
 angular.module('myApp.book', ['ngRoute'])
 
-    .config(['$routeProvider', function($routeProvider) {
-        $routeProvider.when('/book/:id', {
-            templateUrl: 'app/views/singleBook/singleBook.html',
-            controller: 'BookCtrl'
-        });
-    }])
-
     .controller('BookCtrl', ['library', 'shoppingCart', '$scope', '$routeParams',
                     function(library, shoppingCart, $scope, $routeParams) {
         var id = parseInt($routeParams.id, 10);

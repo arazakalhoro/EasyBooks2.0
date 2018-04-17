@@ -16,6 +16,30 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
     $locationProvider.hashPrefix('!');
 
     $routeProvider.otherwise({redirectTo: '/mainBooks'});
+    $routeProvider.when('/about',{
+        templateUrl: 'app/views/about/about.html',
+        controller: 'AboutCtrl'
+    });
+
+    $routeProvider.when('/admin',{
+        templateUrl:'app/views/adminPage/admin.html',
+        controller:'AdminCtrl'
+    });
+
+    $routeProvider.when('/cart',{
+        templateUrl:'app/views/cart/cart.html',
+        controller:'CartCtrl'
+    });
+
+    $routeProvider.when('/cart',{
+        templateUrl: 'app/views/mainBooks/mainBooks.html',
+        controller: 'MainCtrl'
+    });
+
+    $routeProvider.when('/cart',{
+        templateUrl: 'app/views/singleBook/singleBook.html',
+        controller: 'BookCtrl'
+    });
 
 }]);
 

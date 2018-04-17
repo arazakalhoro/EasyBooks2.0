@@ -2,13 +2,6 @@
 
 angular.module('myApp.mainBooks', ['ngRoute'])
 
-.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/mainBooks', {
-    templateUrl: 'app/views/mainBooks/mainBooks.html',
-    controller: 'MainCtrl'
-  });
-}])
-
 .controller('MainCtrl', ['library', 'shoppingCart', '$scope', '$location',
                 function(library, shoppingCart, $scope, $location) {
 
